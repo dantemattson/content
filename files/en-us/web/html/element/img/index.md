@@ -69,7 +69,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     >
     > In these cases, the browser may replace the image with the text in the element's `alt` attribute. For these reasons and others, provide a useful value for `alt` whenever possible.
 
-    Setting this attribute to an empty string (`alt=""`) indicates that this image is _not_ a key part of the content (it's decoration or a tracking pixel), and that non-visual browsers may omit it from {{glossary("Rendering engine", "rendering")}}. Visual browsers will also hide the broken image icon if the `alt` is empty and the image failed to display.
+    Setting this attribute to an empty string (`alt=""`) indicates that this image is _not_ a key part of the content (it's decoration or a tracking pixel), and that non-visual browsers may omit it from {{glossary("Rendering engine", "rendering")}}. Visual browsers will also hide the broken image icon if the `alt` attribute is empty and the image failed to display.
 
     This attribute is also used when copying and pasting the image to text, or saving a linked image to a bookmark.
 
@@ -144,8 +144,6 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
       - : Defers loading the image until it reaches a calculated distance from the viewport, as defined by the browser. The intent is to avoid the network and storage bandwidth needed to handle the image until it's reasonably certain that it will be needed. This generally improves the performance of the content in most typical use cases.
 
     > **Note:** Loading is only deferred when JavaScript is enabled. This is an anti-tracking measure, because if a user agent supported lazy loading when scripting is disabled, it would still be possible for a site to track a user's approximate scroll position throughout a session, by strategically placing images in a page's markup such that a server can track how many images are requested and when.
-
-    > **Note:** A [Firefox bug](https://bugzil.la/1647077) requires that the `loading` attribute must be placed before the `src` attribute, otherwise it has no effect.
 
 - `referrerpolicy`
 
@@ -476,8 +474,9 @@ The value of the `title` attribute is usually presented to the user as a tooltip
 
 ## See also
 
+- {{HTMLElement("picture")}}, {{HTMLElement("object")}}, and {{HTMLElement("embed")}} elements
+- {{cssxref("object-fit")}}, {{cssxref("object-position")}}, {{cssxref("image-orientation")}}, {{cssxref("image-rendering")}}, and {{cssxref("image-resolution")}}: Image-related CSS properties.
+- {{domxref("HTMLImageElement")}} interface for this element
 - [Images in HTML](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
 - [Image file type and format guide](/en-US/docs/Web/Media/Formats/Image_types)
 - [Responsive images](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
-- {{HTMLElement("picture")}}, {{HTMLElement("object")}} and {{HTMLElement("embed")}} elements
-- Other image-related CSS properties: {{cssxref("object-fit")}}, {{cssxref("object-position")}}, {{cssxref("image-orientation")}}, {{cssxref("image-rendering")}}, and {{cssxref("image-resolution")}}.
